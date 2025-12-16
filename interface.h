@@ -50,17 +50,18 @@ public:
 
         double x = (corpo.posicao.x / LARGURA) * 2.0 - 1.0;
         double y = (corpo.posicao.y / ALTURA) * 2.0 - 1.0;
-        double r = corpo.raio / LARGURA; // escala simples
+        double rx = (corpo.raio / LARGURA) *2.0f; // escala simples
+        double ry = (corpo.raio / ALTURA) *2.0f; // escala simples
 
         glBegin(GL_TRIANGLE_FAN);
-        
+
         glVertex2f(x, y);
         for (int i = 0; i <= PASSOS; i++)
         {
             double ang = i * angle;
             glVertex2f(
-                x + cos(ang) * r,
-                y + sin(ang) * r);
+                x + cos(ang) * rx,
+                y + sin(ang) * ry);
         }
         glEnd();
     }

@@ -5,8 +5,8 @@ int main()
     EngineFisica engine;
     Interface interface;
 
-    CorpoRigido c1(Vector2(LARGURA / 2, ALTURA/2 - 200), Vector2(0, 100.0f), 50.0f, 1.0f);
-    CorpoRigido c2(Vector2(LARGURA / 2, ALTURA/2 + 200), Vector2(0, -100.0f), 50.0f, 1.0f);
+    CorpoRigido c1(Vector2(LARGURA / 2, ALTURA/2 - 200), Vector2(-200, 200.0f), 50.0f, 1.0f);
+    CorpoRigido c2(Vector2(LARGURA / 2, ALTURA/2 + 200), Vector2(200, -200.0f), 50.0f, 1.0f);
 
     engine.adicionarCorpo(&c1);
     engine.adicionarCorpo(&c2);
